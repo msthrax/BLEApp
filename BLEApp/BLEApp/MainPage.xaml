@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BLEApp.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Always">
+            <StackLayout Margin="10,1,10,0">
+                <Label Text="Welcome to Bluetooth App!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" FontSize="Medium" />
+                <Button x:Name="Button_State" Text="State" Clicked="Button_State_Clicked" />
+                <Button x:Name="Button_Start" Text="Start" Clicked="Button_Start_Clicked" />
+                <Entry x:Name="Entry_BluetoothDeviceName" Text="MSTHRAX-CORE"/>
+                <Button x:Name="Button_Connect" Text="Connect" Clicked="Button_Connect_Clicked" />
+                <Entry x:Name="Entry_TxData" Text="Transmit Test Data" />
+                <Button x:Name="Button_Transmit" Text="Transmit" Clicked="Button_Transmit_Clicked" />
+                <Grid HorizontalOptions="FillAndExpand" HeightRequest="600" MinimumHeightRequest="300">
+                    <Editor x:Name="Editor_RxData" Text="" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                </Grid>
+                <Label Text="Discovered Devices:" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" />
+                <ListView x:Name="listView_DeviceList" SeparatorColor="Azure" HeightRequest="300" >
+                </ListView>
+                <Label Text="Paired Devices:" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" />
+                <ListView x:Name="listView_PairedDeviceList" SeparatorColor="Azure" HeightRequest="300" >
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
